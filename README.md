@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏗️ Tibyan
+# Tibyan
 
 ### AI-Powered Interior Measurement & Automated Quantity Takeoff
 
@@ -11,7 +11,7 @@
 
 **Transform smartphone video walkthroughs of unfinished interiors into accurate, priced Bills of Quantities — automatically.**
 
-[Features](#-key-features) · [How It Works](#-how-it-works) · [Tech Stack](#-tech-stack) · [Getting Started](#-getting-started) · [System Requirements](#-system-requirements) · [Documentation](#-documentation)
+[Features](#key-features) · [How It Works](#how-it-works) · [Tech Stack](#tech-stack) · [Getting Started](#getting-started) · [System Requirements](#system-requirements) · [Documentation](#documentation)
 
 ---
 
@@ -19,11 +19,11 @@
 
 </div>
 
-## 🎯 The Problem
+## The Problem
 
 Interior finishing contractors lose **4–8 hours per apartment** on manual measurements and an additional **2–4 hours** compiling Bills of Quantities. Worse, inaccurate estimates cause **cost overruns exceeding 10%** — one of the most persistent challenges in the AEC industry. Unfinished construction sites amplify this problem with poor lighting, uniform gray surfaces, and cluttered environments that make manual surveying tedious and error-prone.
 
-## 💡 The Solution
+## The Solution
 
 **Tibyan** eliminates the measurement bottleneck entirely. Record a quick video walkthrough with any smartphone, load it into Tibyan, and receive a fully itemized, wastage-adjusted, priced BOQ within minutes — with **±2% measurement accuracy**.
 
@@ -31,44 +31,44 @@ Interior finishing contractors lose **4–8 hours per apartment** on manual meas
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🎥 Smart Video Input
+### Smart Video Input
 - Accepts **MP4, MOV, AVI, MKV** from any smartphone camera (720p to 4K)
 - Automatic **camera intrinsic extraction** from EXIF metadata
 - Built-in compensation for **poor lighting** and **shaky footage**
 - Intelligent frame sampling to minimize processing time
 
-### 🧠 Dual AI Engine
+### Dual AI Engine
 - **Semantic Segmentation** — Vision Transformer (D-Former) classifies every pixel into walls, ceilings, floors, doors, and windows, trained specifically on construction environments
 - **Metric Depth Estimation** — Depth Anything V2 produces absolute distance maps in meters from monocular video frames
 - Both models run **concurrently** via ONNX Runtime with hardware-adaptive acceleration
 
-### 📐 Precision Measurement
+### Precision Measurement
 - **2D → 3D projection** using the Pinhole Camera Model and Eigen-powered linear algebra
 - **RANSAC planar fitting** for robust surface reconstruction
 - **Automatic void deduction** — door and window areas subtracted from gross wall area
 - **Occlusion handling** — Convex Hull algorithms complete partially hidden surfaces
 - **Reference Gauge calibration** — input one known dimension for absolute metric accuracy
 
-### 📊 Automated BOQ Generation
+### Automated BOQ Generation
 - Outputs organized by **trade category** (Plastering, Flooring, Painting, Ceiling Works)
 - **Configurable waste factors** (5%–15%) per material type
 - Embedded **pricing & consumption rates database** (user-editable)
 - Full **in-app BOQ editor** with manual override, undo/redo, and audit trail
 
-### 📤 Professional Export
+### Professional Export
 - **Excel (.xlsx)** — formatted with formulas, subtotals, and project headers
 - **PDF (.pdf)** — print-ready with logo placeholder and pagination
 - **CSV (.csv)** — raw data for integration with external tools
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ```
 ┌─────────────┐     ┌──────────────────┐     ┌───────────────────────┐
-│  📹 Video   │────▶│  FFmpeg Decoder   │────▶│  Frame Sampling       │
+│  Video      │────▶│  FFmpeg Decoder   │────▶│  Frame Sampling       │
 │  Input      │     │  + EXIF Parser    │     │  (Configurable FPS)   │
 └─────────────┘     └──────────────────┘     └───────────┬───────────┘
                                                          │
@@ -100,7 +100,7 @@ Interior finishing contractors lose **4–8 hours per apartment** on manual meas
                                     └──────────┬───────────┘
                                                │
                                     ┌──────────▼───────────┐
-                                    │  📋 BOQ Engine       │
+                                    │  BOQ Engine          │
                                     │  Pricing + Wastage   │
                                     │  → Excel / PDF / CSV │
                                     └──────────────────────┘
@@ -108,7 +108,7 @@ Interior finishing contractors lose **4–8 hours per apartment** on manual meas
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer                  | Technology                                      | Purpose                                           |
 | :--------------------- | :---------------------------------------------- | :------------------------------------------------ |
@@ -125,7 +125,7 @@ Interior finishing contractors lose **4–8 hours per apartment** on manual meas
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -169,7 +169,7 @@ python scripts/download_models.py --output models/
 
 ---
 
-## 💻 System Requirements
+## System Requirements
 
 | Component   | Minimum                                        | Recommended                                       |
 | :---------- | :--------------------------------------------- | :------------------------------------------------ |
@@ -180,7 +180,7 @@ python scripts/download_models.py --output models/
 | **Storage** | 2 GB free                                      | SSD, ≥ 10 GB free                                 |
 | **Display** | 1366 × 768                                     | 1920 × 1080+                                      |
 
-### ⚡ Performance Benchmarks
+### Performance Benchmarks
 
 | Scenario                  | Hardware                       | 1-min Video (1080p) |
 | :------------------------ | :----------------------------- | :------------------ |
@@ -189,7 +189,7 @@ python scripts/download_models.py --output models/
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 tibyan/
@@ -213,7 +213,7 @@ tibyan/
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 | Document                                | Description                                           |
 | :-------------------------------------- | :---------------------------------------------------- |
@@ -223,7 +223,7 @@ tibyan/
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [x] Technical research & architecture design
 - [x] Product Requirements Document (PRD)
@@ -240,13 +240,13 @@ tibyan/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is currently a proprietary, closed-source project. Contribution guidelines will be published if and when the project transitions to an open-source model.
 
 ---
 
-## 📄 License
+## License
 
 All rights reserved. This software and its source code are proprietary. Unauthorized copying, distribution, or modification is strictly prohibited.
 
@@ -254,7 +254,7 @@ All rights reserved. This software and its source code are proprietary. Unauthor
 
 <div align="center">
 
-**Built with 🧠 AI and ❤️ for the AEC industry**
+**Built with AI for the AEC industry**
 
 *Tibyan — تبيان*
 
