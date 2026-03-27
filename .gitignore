@@ -1,118 +1,69 @@
 # =============================================================================
-# Wateen Project — .gitignore
+# Tibyan Project — .gitignore (C++ / Qt 6)
 # =============================================================================
 
-# ── Python ──
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-*.egg-info/
-*.egg
-dist/
+# --- Build Outputs ---
 build/
-.eggs/
+bin/
+obj/
+out/
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.exe
+*.dll
+*.dylib
+*.pdb
+*.exp
+*.ilk
 
-# ── Virtual Environments ──
-venv/
-.venv/
-env/
-
-# ── Environment Variables ──
-.env
-.env.production
-!.env.example
-
-# ── SSL Certificates (NEVER COMMIT) ──
-*.pem
-*.key
-*.crt
-docker/ssl/*.pem
-
-# ── Backups ──
-backups/
-*.backup
-
-# ── Database ──
-db.sqlite3
-*.sqlite3
-
-# ── Django ──
-staticfiles/
-mediafiles/
-
-# ── IDE / Editor ──
+# --- IDEs & Editors ---
+.vscode/
 .idea/
 *.swp
 *.swo
 *~
 .DS_Store
 Thumbs.db
-nul
+*.user
+*.suo
+*.sln
+*.vcxproj
+*.filters
 
-# ── Docker ──
-# (docker volumes are external, nothing to ignore here)
+# --- Dependencies & Runtimes ---
+node_modules/
+vcpkg_installed/
+conan/
 
-
-# ── OS ──
+# --- Environment & Logs ---
+.env
+.env.*
+!.env.example
 *.log
 *.pid
 *.seed
 
-# ── Temporary Test & Debug Output ──
-*_output.txt
-*_output*.txt
-test_out*.txt
-test_errors.txt
-test_failures*.txt
-logs_dump.txt
-remaining_tests.txt
-error_log.txt
-check_output.txt
-output.txt
+# --- AI Models & Large Data ---
+# (Models should be tracked via LFS or scripts, but ignore local downloads)
+models/*.onnx
+models/*.pb
+models/*.weights
+data/*.db
+data/*.json
+!data/pricing.db
+!data/camera_intrinsics.json
 
-# ── MCP & Tool Config (generated/temporary) ──
-mcp_output.json
-mcp_tools.json
-mcp_config.json
-invoke_mcp.mjs
-mcp_client.mjs
-projects_out.json
-tools.json
-act.json
-opencode.json
+# --- Documentation Cache ---
+docs/api_reference/html/
+docs/api_reference/latex/
 
-# ── Temporary JSON files ──
-payload.json
-payload_auth.json
-firewall.json
-firewall_utf8.json
-rule.json
-schema.json
-verification-report.json
-
-# ── Cache Directories ──
-.pytest_cache/
-.ruff_cache/
+# --- Specify & Agent Context ---
 .agent/
 .opencode/
 .specify/
-
-# ── Node.js ──
-node_modules/
-package-lock.json
-
-# ── Frontend (Next.js) ──
-frontend/.next/
-frontend/node_modules/
-frontend/package-lock.json
-
-# ── Misc Temporary Files ──
-help.txt
-run_tests.bat
-run_tests.sh
-run_tests_manual.py
-verify_age.py
 .agents/
 .kilocode/
 .opencode/
@@ -131,3 +82,6 @@ test_output3.txt
 # Prevent sensitive files from being committed
 nul
 specs/
+roadmap
+tmp_run_specify_plan.sh
+tmp_run_specify.sh
