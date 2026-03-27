@@ -9,12 +9,13 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 COMPONENTS Widgets Concurrent LinguistTools REQUIRED)
+find_package(Eigen3 3.4 REQUIRED)
 
 option(TIBYAN_BUILD_TESTS "Build unit tests" ON)
 
 add_executable(Tibyan src/ui/main.cpp src/ui/MainWindow.cpp src/ui/MainWindow.h)
 set_target_properties(Tibyan PROPERTIES WIN32_EXECUTABLE TRUE)
-target_link_libraries(Tibyan PRIVATE Qt6::Widgets Qt6::Concurrent)
+target_link_libraries(Tibyan PRIVATE Qt6::Widgets Qt6::Concurrent Eigen3::Eigen)
 
 if(TIBYAN_BUILD_TESTS)
     enable_testing()
